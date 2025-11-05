@@ -179,7 +179,7 @@ const Experience = () => {
         )}
 
         {selectedExperience && (
-          <div ref={detailsCardRef} className="mt-16 max-w-3xl mx-auto">
+          <div ref={detailsCardRef} className="mt-16"> {/* Removed max-w-3xl mx-auto */}
             <WorkDetailsCard experience={selectedExperience} />
           </div>
         )}
