@@ -5,10 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar"; // Import the Navbar component
-import About from "./pages/About"; // Placeholder for About page
-import Projects from "./pages/Projects"; // Placeholder for Projects page
-import Contact from "./pages/Contact"; // Placeholder for Contact page
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Experience from "./pages/Experience"; // Import the new Experience page
 
 const queryClient = new QueryClient();
 
@@ -18,13 +19,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navbar /> {/* Render the Navbar here */}
-        <div className="pt-16"> {/* Add padding to prevent content from being hidden by fixed navbar */}
+        <Navbar />
+        <div className="pt-16">
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} /> {/* New About route */}
-            <Route path="/projects" element={<Projects />} /> {/* New Projects route */}
-            <Route path="/contact" element={<Contact />} /> {/* New Contact route */}
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/experience" element={<Experience />} /> {/* New Experience route */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
