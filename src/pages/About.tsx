@@ -4,6 +4,43 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Globe, ShoppingCart, Layout, Gamepad, BarChart2, TrendingUp, Zap, Mail,
+  Code, Palette, Type, Wind, Atom, Leaf, ArrowRight, Sparkles,
+  MonitorDot, Brain, Search, Bot, Mailbox, Rocket, Lightbulb, Settings
+} from "lucide-react";
+
+const skillIcons: { [key: string]: React.ElementType } = {
+  // Web Development
+  "WordPress": Globe,
+  "Shopify": ShoppingCart,
+  "Elementor": Layout,
+  "Divi": Layout,
+  // Game Development
+  "Unity 3D": Gamepad,
+  "Unreal Engine 5": Gamepad,
+  "Godot": Gamepad,
+  // SEO
+  "Google Analytics": BarChart2,
+  "SureRank": TrendingUp,
+  "RankMath": TrendingUp,
+  "Yoast SEO": TrendingUp,
+  // Automation
+  "GoHighLevel": Zap,
+  "MailChimp": Mail,
+  "Zapier": Zap,
+  "Active Campaign": Mailbox,
+  // Tech Stack
+  "C#": Code,
+  "C++": Code,
+  "CSS": Palette,
+  "TypeScript": Type,
+  "Tailwind": Wind,
+  "React": Atom,
+  "Laravel": Leaf,
+  "Next.js": ArrowRight,
+  "GSAP": Sparkles,
+};
 
 const About = () => {
   const heroRef = useRef(null);
@@ -75,27 +112,30 @@ const About = () => {
         </div>
       </div>
 
-      {/* Skills section moved outside the max-width container to be full width */}
-      <div ref={skillsSectionRef} className="mt-12">
+      <div ref={skillsSectionRef} className="mt-12 px-4 md:px-8"> {/* Added px-4 md:px-8 for consistent padding */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight">
           My <span className="text-blue-400">Skills</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4"> {/* Added max-w-6xl and px-4 for better visual */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(categorizedSkills).map(([category, skills]) => (
             <Card key={category} className="bg-gray-800 border-gray-700 text-white shadow-xl">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-blue-300">{category}</CardTitle>
+                <CardTitle className="text-2xl font-bold text-blue-300 text-center">{category}</CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
-                  <Badge
-                    key={index}
-                    variant="secondary"
-                    className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
+              <CardContent className="flex flex-wrap justify-center gap-3">
+                {skills.map((skill, index) => {
+                  const IconComponent = skillIcons[skill];
+                  return (
+                    <Badge
+                      key={index}
+                      variant="secondary"
+                      className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105 flex items-center"
+                    >
+                      {IconComponent && <IconComponent className="mr-2 h-4 w-4" />}
+                      {skill}
+                    </Badge>
+                  );
+                })}
               </CardContent>
             </Card>
           ))}
