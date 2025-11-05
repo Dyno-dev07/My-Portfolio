@@ -3,6 +3,7 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge"; // Import Badge component
 import { Link } from "react-router-dom";
 
 interface Project {
@@ -11,6 +12,7 @@ interface Project {
   description: string;
   imageUrl: string;
   link: string;
+  techStack: string[]; // Added techStack property
 }
 
 const projects: Project[] = [
@@ -18,8 +20,9 @@ const projects: Project[] = [
     id: 1,
     title: "Bowers & Flowers",
     description: "A beautiful e-commerce site for flowers and gifts, focusing on user experience and elegant design.",
-    imageUrl: "/placeholder.svg", // Using a generic placeholder image
+    imageUrl: "/placeholder.svg",
     link: "https://bowersandflowers.com.au/",
+    techStack: ["Shopify"], // Added tech stack
   },
   {
     id: 2,
@@ -27,6 +30,7 @@ const projects: Project[] = [
     description: "Specialized website for gas detection equipment, providing detailed product information and industry solutions.",
     imageUrl: "/placeholder.svg",
     link: "https://www.gasdetectionaustralia.com.au/",
+    techStack: ["WordPress"], // Added tech stack
   },
   {
     id: 3,
@@ -34,6 +38,7 @@ const projects: Project[] = [
     description: "Corporate website for RSD, showcasing their services and expertise with a professional and clean interface.",
     imageUrl: "/placeholder.svg",
     link: "https://www.rsd.co.nz/",
+    techStack: ["WordPress"], // Added tech stack
   },
   {
     id: 4,
@@ -41,6 +46,7 @@ const projects: Project[] = [
     description: "E-commerce platform for Woolstar, featuring high-quality wool products with a focus on natural comfort and sustainability.",
     imageUrl: "/placeholder.svg",
     link: "https://woolstar.com.au/",
+    techStack: ["Shopify"], // Added tech stack
   },
   {
     id: 5,
@@ -48,6 +54,7 @@ const projects: Project[] = [
     description: "Online presence for Homely Flooring, offering a wide range of flooring options with an intuitive browsing experience.",
     imageUrl: "/placeholder.svg",
     link: "https://www.homelyflooring.com.au/",
+    techStack: ["WordPress"], // Added tech stack
   },
 ];
 
@@ -72,9 +79,16 @@ const Projects = () => {
                 <CardTitle className="text-2xl font-bold text-blue-300 mb-2">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardDescription className="text-gray-300 mb-4">
                   {project.description}
                 </CardDescription>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech, index) => (
+                    <Badge key={index} variant="secondary" className="bg-blue-500 text-white hover:bg-blue-600">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-md transition-all duration-300 ease-in-out transform hover:scale-105">
