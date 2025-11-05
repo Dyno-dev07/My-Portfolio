@@ -4,10 +4,11 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import LocationCard from "@/components/LocationCard"; // Import the new LocationCard
 import {
   Globe, ShoppingCart, Layout, Gamepad, BarChart2, TrendingUp, Zap, Mail,
   Code, Palette, Type, Wind, Atom, Leaf, ArrowRight, Sparkles,
-  MonitorDot, Brain, Cloud, Film, Mic, Scissors // Added Film, Mic, Scissors icons
+  MonitorDot, Brain, Cloud, Film, Mic, Scissors
 } from "lucide-react";
 
 const skillIcons: { [key: string]: React.ElementType } = {
@@ -96,13 +97,16 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-4 md:p-8">
       <div ref={heroRef} className="max-w-4xl mx-auto py-12 md:py-20">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-          <div ref={imageRef} className="flex-shrink-0">
-            {/* Placeholder for profile picture */}
-            <div className="w-48 h-48 md:w-64 md:h-64 bg-blue-500 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4 border-blue-400">
-              <span className="text-6xl font-bold text-white">DA</span>
-              {/* You can replace this div with an actual <img> tag */}
-              {/* <img src="/path/to/your/profile-pic.jpg" alt="Deanne Agir" className="w-full h-full object-cover" /> */}
+          <div className="flex flex-col items-center gap-4"> {/* Added a flex container for image and location card */}
+            <div ref={imageRef} className="flex-shrink-0">
+              {/* Placeholder for profile picture */}
+              <div className="w-48 h-48 md:w-64 md:h-64 bg-blue-500 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4 border-blue-400">
+                <span className="text-6xl font-bold text-white">DA</span>
+                {/* You can replace this div with an actual <img> tag */}
+                {/* <img src="/path/to/your/profile-pic.jpg" alt="Deanne Agir" className="w-full h-full object-cover" /> */}
+              </div>
             </div>
+            <LocationCard /> {/* Render the new LocationCard here */}
           </div>
           <div ref={textRef} className="text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
