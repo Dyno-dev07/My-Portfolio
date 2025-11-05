@@ -51,8 +51,8 @@ const experiences: ExperienceItem[] = [
   },
 ];
 
-// Sort experiences by start date in ascending order
-experiences.sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+// Sort experiences by start date in descending order (latest first)
+experiences.sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
 
 const Experience = () => {
   const titleRef = useRef(null);
