@@ -29,14 +29,20 @@ const About = () => {
     );
   }, []);
 
-  const skills = [
-    "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js",
-    "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "Git",
-    "REST APIs", "GraphQL", "Figma", "UI/UX Design",
-    "Laravel", "JavaScript", "CSS", "HTML", "Java",
-    "C#", "C++", "Unity", "Unreal Engine",
-    "AI-driven Development", "Prompt Engineering"
-  ];
+  const categorizedSkills = {
+    "Web Development": [
+      "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js",
+      "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "Git",
+      "REST APIs", "GraphQL", "Figma", "UI/UX Design", "Laravel",
+      "JavaScript", "CSS", "HTML", "Java"
+    ],
+    "Game Development": [
+      "C#", "C++", "Unity", "Unreal Engine"
+    ],
+    "Automation and SEO": [
+      "AI-driven Development", "Prompt Engineering", "SEO Optimization"
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-4 md:p-8">
@@ -55,14 +61,11 @@ const About = () => {
               About <span className="text-blue-400">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-6">
-              I'm Deanne Agir, a dedicated and innovative developer passionate about crafting dynamic digital experiences.
-              With expertise in both web and game development, I leverage a strong problem-solving mindset to build solutions that push boundaries.
-            </p>
-            <p className="text-md md:text-lg text-gray-400 mb-6">
-              My toolkit includes technologies like Laravel, JavaScript, CSS, HTML, Java for web, and C#, C++, Unity, Unreal Engine for games.
-              Committed to continuous learning, I stay ahead of industry trends, including AI-driven development and prompt engineering, to deliver future-ready projects.
+              I'm Deanne Agir, a dedicated and innovative developer with expertise in both web and game development.
+              Leveraging a strong problem-solving mindset and a passion for technology, I craft dynamic digital experiences that push boundaries.
             </p>
             <p className="text-md md:text-lg text-gray-400">
+              Committed to continuous learning, I stay ahead of industry trends, including AI-driven development and prompt engineering, to build future-ready solutions.
               I thrive in collaborative environments where creativity meets technical excellence. Let's connect and build something great together! 🚀
             </p>
           </div>
@@ -72,15 +75,22 @@ const About = () => {
           <CardHeader>
             <CardTitle className="text-3xl font-bold text-blue-400">My Skills</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-wrap gap-3">
-            {skills.map((skill, index) => (
-              <Badge
-                key={index}
-                variant="secondary"
-                className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105"
-              >
-                {skill}
-              </Badge>
+          <CardContent className="flex flex-col gap-6">
+            {Object.entries(categorizedSkills).map(([category, skills]) => (
+              <div key={category}>
+                <h3 className="text-xl font-semibold text-blue-300 mb-3">{category}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skills.map((skill, index) => (
+                    <Badge
+                      key={index}
+                      variant="secondary"
+                      className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
             ))}
           </CardContent>
         </Card>
