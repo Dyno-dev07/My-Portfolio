@@ -127,16 +127,16 @@ const Experience = () => {
               <Card
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="bg-gray-800 border-gray-700 text-white shadow-xl flex flex-col items-center text-center p-6 cursor-pointer hover:scale-105 transition-transform duration-200"
+                className="group bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 text-white shadow-lg rounded-xl flex flex-col items-center text-center p-6 cursor-pointer hover:scale-105 hover:shadow-2xl hover:border-blue-600 transition-all duration-300 ease-in-out"
                 onClick={() => handleCardClick(exp)}
               >
-                <Briefcase className="h-10 w-10 text-blue-400 mb-4" />
+                <Briefcase className="h-10 w-10 text-blue-400 mb-4 group-hover:text-blue-300 transition-colors duration-300" />
                 <CardHeader className="p-0">
-                  <CardTitle className="text-2xl font-bold text-blue-300 mb-1">
+                  <CardTitle className="text-2xl font-bold text-blue-300 mb-1 group-hover:text-blue-200 transition-colors duration-300">
                     {exp.title}
                   </CardTitle>
-                  <p className="text-lg text-gray-400 mb-1">{exp.company}</p>
-                  <p className="text-sm text-gray-500">{exp.dateRange}</p>
+                  <p className="text-lg text-gray-300 mb-1 group-hover:text-gray-200 transition-colors duration-300">{exp.company}</p>
+                  <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{exp.dateRange}</p>
                 </CardHeader>
               </Card>
             ))}
@@ -156,21 +156,21 @@ const Experience = () => {
                 }`}
               >
                 {/* Circle for timeline point */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10 w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center">
+                <div className="absolute left-1/2 transform -translate-x-1/2 z-10 w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center shadow-lg">
                   <Briefcase className="h-5 w-5 text-gray-900" />
                 </div>
 
                 {/* Experience Card */}
                 <Card
-                  className="bg-gray-800 border-gray-700 text-white shadow-xl w-full max-w-sm p-6 cursor-pointer hover:scale-105 transition-transform duration-200"
+                  className="group bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 text-white shadow-lg rounded-xl w-full max-w-sm p-6 cursor-pointer hover:scale-105 hover:shadow-2xl hover:border-blue-600 transition-all duration-300 ease-in-out"
                   onClick={() => handleCardClick(exp)}
                 >
                   <CardHeader className="p-0 text-center">
-                    <CardTitle className="text-2xl font-bold text-blue-300 mb-1">
+                    <CardTitle className="text-2xl font-bold text-blue-300 mb-1 group-hover:text-blue-200 transition-colors duration-300">
                       {exp.title}
                     </CardTitle>
-                    <p className="text-lg text-gray-400 mb-1">{exp.company}</p>
-                    <p className="text-sm text-gray-500">{exp.dateRange}</p>
+                    <p className="text-lg text-gray-300 mb-1 group-hover:text-gray-200 transition-colors duration-300">{exp.company}</p>
+                    <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{exp.dateRange}</p>
                   </CardHeader>
                 </Card>
               </div>
@@ -179,7 +179,7 @@ const Experience = () => {
         )}
 
         {selectedExperience && (
-          <div ref={detailsCardRef} className="mt-16"> {/* Removed max-w-3xl mx-auto */}
+          <div ref={detailsCardRef} className="mt-16">
             <WorkDetailsCard experience={selectedExperience} />
           </div>
         )}
