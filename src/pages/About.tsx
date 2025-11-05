@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import {
   Globe, ShoppingCart, Layout, Gamepad, BarChart2, TrendingUp, Zap, Mail,
   Code, Palette, Type, Wind, Atom, Leaf, ArrowRight, Sparkles,
-  MonitorDot, Brain, Search, Bot, Mailbox, Rocket, Lightbulb, Settings
+  MonitorDot, Brain, Cloud // Added Cloud icon
 } from "lucide-react";
 
 const skillIcons: { [key: string]: React.ElementType } = {
@@ -29,7 +29,7 @@ const skillIcons: { [key: string]: React.ElementType } = {
   "GoHighLevel": Zap,
   "MailChimp": Mail,
   "Zapier": Zap,
-  "Active Campaign": Mailbox,
+  "Active Campaign": Mail, // Reusing Mail for Active Campaign
   // Tech Stack
   "C#": Code,
   "C++": Code,
@@ -40,6 +40,11 @@ const skillIcons: { [key: string]: React.ElementType } = {
   "Laravel": Leaf,
   "Next.js": ArrowRight,
   "GSAP": Sparkles,
+  // Learning & Interests
+  "AI/ML": Brain,
+  "Blockchain": Atom, // Reusing Atom for Blockchain
+  "UI/UX Design": Palette, // Reusing Palette for UI/UX Design
+  "Cloud Computing": Cloud,
 };
 
 const About = () => {
@@ -81,6 +86,9 @@ const About = () => {
     ],
     "Tech Stack": [
       "C#", "C++", "CSS", "TypeScript", "Tailwind", "React", "Laravel", "Next.js", "GSAP"
+    ],
+    "Learning & Interests": [
+      "AI/ML", "Blockchain", "UI/UX Design", "Cloud Computing"
     ]
   };
 
@@ -112,7 +120,7 @@ const About = () => {
         </div>
       </div>
 
-      <div ref={skillsSectionRef} className="mt-12 px-4 md:px-8"> {/* Added px-4 md:px-8 for consistent padding */}
+      <div ref={skillsSectionRef} className="mt-12 px-4 md:px-8">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight">
           My <span className="text-blue-400">Skills</span>
         </h2>
