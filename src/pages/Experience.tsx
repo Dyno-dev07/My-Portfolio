@@ -1,16 +1,22 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"; // Import ScrollToPlugin
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile"; // Import the useIsMobile hook
+import WorkDetailsCard from "@/components/WorkDetailsCard"; // Import the new WorkDetailsCard
+
+// Register ScrollToPlugin once
+gsap.registerPlugin(ScrollToPlugin);
 
 interface ExperienceItem {
   title: string;
   company: string;
   dateRange: string;
   startDate: Date; // Used for sorting
+  description: string; // Re-introducing description for the details card
 }
 
 const experiences: ExperienceItem[] = [
@@ -19,30 +25,35 @@ const experiences: ExperienceItem[] = [
     company: "Mangtas",
     dateRange: "Feb - May 2023",
     startDate: new Date("2023-02-01"),
+    description: "As a Software Engineer Intern at Mangtas, I contributed to the development and maintenance of web applications. My responsibilities included writing clean, efficient code, participating in code reviews, and assisting in debugging and testing phases. I gained hands-on experience with modern web technologies and agile development methodologies.",
   },
   {
     title: "Technical Developer",
     company: "Sites at Scale",
     dateRange: "Jul 2023 - Nov 2024",
     startDate: new Date("2023-07-01"),
+    description: "At Sites at Scale, I worked as a Technical Developer, focusing on building and customizing websites for various clients. I specialized in implementing complex features, optimizing site performance, and ensuring cross-browser compatibility. My role involved close collaboration with designers and project managers to deliver high-quality web solutions.",
   },
   {
     title: "Shopify Web Developer",
     company: "Chino Mowers & Engine Service",
     dateRange: "Jan - Mar 2024",
     startDate: new Date("2024-01-01"),
+    description: "As a Shopify Web Developer for Chino Mowers & Engine Service, I was responsible for designing, developing, and maintaining their e-commerce store. This included custom theme development, app integration, and optimizing the user experience to drive sales. I ensured the site was responsive and visually appealing across all devices.",
   },
   {
     title: "Quality Assurance Specialist",
     company: "Sites at Scale",
     dateRange: "Nov 2024 - Feb 2025",
     startDate: new Date("2024-11-01"),
+    description: "In my role as a Quality Assurance Specialist at Sites at Scale, I was tasked with ensuring the reliability and functionality of web applications. I developed and executed test plans, identified and documented bugs, and worked closely with development teams to resolve issues. My focus was on delivering a flawless user experience.",
   },
   {
     title: "Software Engineer",
     company: "Elisha & Charles Solutions Inc.",
     dateRange: "Apr 2025 - PRESENT",
     startDate: new Date("2025-04-01"),
+    description: "Currently, as a Software Engineer at Elisha & Charles Solutions Inc., I am involved in the full software development lifecycle, from conceptualization to deployment. I design and implement robust, scalable, and efficient software solutions, contributing to innovative projects and leveraging cutting-edge technologies.",
   },
 ];
 
@@ -54,6 +65,9 @@ const Experience = () => {
   const titleRef = useRef(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const timelineRefs = useRef<(HTMLDivElement | null)[]>([]); // For desktop timeline items
+  const detailsCardRef = useRef<HTMLDivElement>(null); // Ref for the details card section
+
+  const [selectedExperience, setSelectedExperience] = useState<ExperienceItem | null>(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -85,6 +99,20 @@ const Experience = () => {
     }
   }, [isMobile]); // Re-run animations when isMobile changes
 
+  const handleCardClick = (exp: ExperienceItem) => {
+    setSelectedExperience(exp);
+    // Scroll to the details card after a short delay to allow rendering
+    setTimeout(() => {
+      if (detailsCardRef.current) {
+        gsap.to(window, {
+          duration: 0.8,
+          scrollTo: { y: detailsCardRef.current.offsetTop, offsetY: 20 }, // Adjust offsetY as needed
+          ease: "power2.out",
+        });
+      }
+    }, 100); // Small delay to ensure the card is rendered before scrolling
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-4 md:p-8">
       <div className="max-w-6xl mx-auto py-12 md:py-20">
@@ -99,7 +127,8 @@ const Experience = () => {
               <Card
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="bg-gray-800 border-gray-700 text-white shadow-xl flex flex-col items-center text-center p-6"
+                className="bg-gray-800 border-gray-700 text-white shadow-xl flex flex-col items-center text-center p-6 cursor-pointer hover:scale-105 transition-transform duration-200"
+                onClick={() => handleCardClick(exp)}
               >
                 <Briefcase className="h-10 w-10 text-blue-400 mb-4" />
                 <CardHeader className="p-0">
@@ -132,7 +161,10 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Card */}
-                <Card className="bg-gray-800 border-gray-700 text-white shadow-xl w-full max-w-sm p-6">
+                <Card
+                  className="bg-gray-800 border-gray-700 text-white shadow-xl w-full max-w-sm p-6 cursor-pointer hover:scale-105 transition-transform duration-200"
+                  onClick={() => handleCardClick(exp)}
+                >
                   <CardHeader className="p-0 text-center">
                     <CardTitle className="text-2xl font-bold text-blue-300 mb-1">
                       {exp.title}
@@ -143,6 +175,12 @@ const Experience = () => {
                 </Card>
               </div>
             ))}
+          </div>
+        )}
+
+        {selectedExperience && (
+          <div ref={detailsCardRef} className="mt-16 max-w-3xl mx-auto">
+            <WorkDetailsCard experience={selectedExperience} />
           </div>
         )}
       </div>
