@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom"; // Import Link
 
 const Index = () => {
   const titleRef = useRef(null);
@@ -44,8 +45,10 @@ const Index = () => {
           A passionate developer crafting engaging web experiences with modern technologies.
         </p>
         <div ref={ctaRef}>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-            View My Work
+          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Link to="/projects">
+              View My Work
+            </Link>
           </Button>
         </div>
       </div>
