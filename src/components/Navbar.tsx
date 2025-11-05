@@ -10,7 +10,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Navbar = () => {
   const isMobile = useIsMobile();
 
-  const navLinks = (
+  // Mobile navigation links (keep existing styling)
+  const mobileNavLinks = (
     <>
       <Link to="/" className="text-lg font-medium hover:text-blue-400 transition-colors">
         Home
@@ -42,13 +43,25 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent side="right" className="bg-gray-950 text-white border-gray-800">
               <div className="flex flex-col space-y-4 mt-8">
-                {navLinks}
+                {mobileNavLinks}
               </div>
             </SheetContent>
           </Sheet>
         ) : (
           <div className="flex space-x-8">
-            {navLinks}
+            {/* Desktop navigation links with new hover styles */}
+            <Link to="/" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+              Home
+            </Link>
+            <Link to="/about" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+              About
+            </Link>
+            <Link to="/projects" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+              Projects
+            </Link>
+            <Link to="/contact" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+              Contact
+            </Link>
           </div>
         )}
       </div>
