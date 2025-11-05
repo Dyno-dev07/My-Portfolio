@@ -32,7 +32,10 @@ const About = () => {
   const skills = [
     "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js",
     "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "Git",
-    "REST APIs", "GraphQL", "Figma", "UI/UX Design"
+    "REST APIs", "GraphQL", "Figma", "UI/UX Design",
+    "Laravel", "JavaScript", "CSS", "HTML", "Java",
+    "C#", "C++", "Unity", "Unreal Engine",
+    "AI-driven Development", "Prompt Engineering"
   ];
 
   return (
@@ -52,16 +55,15 @@ const About = () => {
               About <span className="text-blue-400">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-6">
-              Hello! I'm Deanne Agir, a passionate software developer with a knack for building
-              beautiful and functional web applications. My journey in tech started with a curiosity
-              for how things work, which quickly evolved into a love for crafting elegant solutions
-              to complex problems. I thrive on learning new technologies and constantly improving
-              my craft.
+              I'm Deanne Agir, a dedicated and innovative developer passionate about crafting dynamic digital experiences.
+              With expertise in both web and game development, I leverage a strong problem-solving mindset to build solutions that push boundaries.
+            </p>
+            <p className="text-md md:text-lg text-gray-400 mb-6">
+              My toolkit includes technologies like Laravel, JavaScript, CSS, HTML, Java for web, and C#, C++, Unity, Unreal Engine for games.
+              Committed to continuous learning, I stay ahead of industry trends, including AI-driven development and prompt engineering, to deliver future-ready projects.
             </p>
             <p className="text-md md:text-lg text-gray-400">
-              When I'm not coding, you can find me exploring new hiking trails, experimenting with
-              new recipes, or diving into a good book. I believe in continuous growth, both
-              personally and professionally.
+              I thrive in collaborative environments where creativity meets technical excellence. Let's connect and build something great together! 🚀
             </p>
           </div>
         </div>
