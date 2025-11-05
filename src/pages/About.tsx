@@ -9,7 +9,7 @@ const About = () => {
   const heroRef = useRef(null);
   const imageRef = useRef(null);
   const textRef = useRef(null);
-  const skillsRef = useRef(null);
+  const skillsSectionRef = useRef(null); // Renamed to reflect it wraps multiple cards
 
   useEffect(() => {
     gsap.fromTo(
@@ -23,7 +23,7 @@ const About = () => {
       { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" }
     );
     gsap.fromTo(
-      skillsRef.current,
+      skillsSectionRef.current,
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "power3.out" }
     );
@@ -31,16 +31,19 @@ const About = () => {
 
   const categorizedSkills = {
     "Web Development": [
-      "React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js",
-      "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "Git",
-      "REST APIs", "GraphQL", "Figma", "UI/UX Design", "Laravel",
-      "JavaScript", "CSS", "HTML", "Java"
+      "WordPress", "Shopify", "Elementor", "Divi"
     ],
     "Game Development": [
-      "C#", "C++", "Unity", "Unreal Engine"
+      "Unity 3D", "Unreal Engine 5", "Godot"
     ],
-    "Automation and SEO": [
-      "AI-driven Development", "Prompt Engineering", "SEO Optimization"
+    "SEO": [
+      "Google Analytics", "SureRank", "RankMath", "Yoast SEO"
+    ],
+    "Automation": [
+      "GoHighLevel", "MailChimp", "Zapier", "Active Campaign"
+    ],
+    "Tech Stack": [
+      "C#", "C++", "CSS", "TypeScript", "Tailwind", "React", "Laravel", "Next.js", "GSAP"
     ]
   };
 
@@ -71,15 +74,17 @@ const About = () => {
           </div>
         </div>
 
-        <Card ref={skillsRef} className="mt-12 bg-gray-800 border-gray-700 text-white shadow-xl">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-blue-400">My Skills</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
+        <div ref={skillsSectionRef} className="mt-12">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight">
+            My <span className="text-blue-400">Skills</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(categorizedSkills).map(([category, skills]) => (
-              <div key={category}>
-                <h3 className="text-xl font-semibold text-blue-300 mb-3">{category}</h3>
-                <div className="flex flex-wrap gap-3">
+              <Card key={category} className="bg-gray-800 border-gray-700 text-white shadow-xl">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-blue-300">{category}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-3">
                   {skills.map((skill, index) => (
                     <Badge
                       key={index}
@@ -89,11 +94,11 @@ const About = () => {
                       {skill}
                     </Badge>
                   ))}
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
