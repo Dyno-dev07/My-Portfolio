@@ -9,7 +9,7 @@ const About = () => {
   const heroRef = useRef(null);
   const imageRef = useRef(null);
   const textRef = useRef(null);
-  const skillsSectionRef = useRef(null); // Renamed to reflect it wraps multiple cards
+  const skillsSectionRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -73,31 +73,32 @@ const About = () => {
             </p>
           </div>
         </div>
+      </div>
 
-        <div ref={skillsSectionRef} className="mt-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight">
-            My <span className="text-blue-400">Skills</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(categorizedSkills).map(([category, skills]) => (
-              <Card key={category} className="bg-gray-800 border-gray-700 text-white shadow-xl">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-blue-300">{category}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-wrap gap-3">
-                  {skills.map((skill, index) => (
-                    <Badge
-                      key={index}
-                      variant="secondary"
-                      className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      {/* Skills section moved outside the max-width container to be full width */}
+      <div ref={skillsSectionRef} className="mt-12">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-8 leading-tight">
+          My <span className="text-blue-400">Skills</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4"> {/* Added max-w-6xl and px-4 for better visual */}
+          {Object.entries(categorizedSkills).map(([category, skills]) => (
+            <Card key={category} className="bg-gray-800 border-gray-700 text-white shadow-xl">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-blue-300">{category}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-3">
+                {skills.map((skill, index) => (
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="bg-blue-600 hover:bg-blue-700 text-white text-md px-4 py-2 rounded-full transition-all duration-200 ease-in-out transform hover:scale-105"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </div>
