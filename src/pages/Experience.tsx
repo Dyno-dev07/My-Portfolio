@@ -114,8 +114,15 @@ const Experience = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-4 md:p-8">
-      <div className="max-w-6xl mx-auto py-12 md:py-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-4 md:p-8 relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-0 left-1/2 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto py-12 md:py-20 relative z-10"> {/* Added relative z-10 */}
         <h2 ref={titleRef} className="text-4xl md:text-5xl font-extrabold text-center mb-12 leading-tight">
           My <span className="text-blue-400">Experience</span>
         </h2>
