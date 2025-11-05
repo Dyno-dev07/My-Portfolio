@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="w-full bg-gray-950 p-4 shadow-lg fixed top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
-          Your Name
+          Deanne Agir
         </Link>
         {isMobile ? (
           <Sheet>
