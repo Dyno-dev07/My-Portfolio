@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import {
   Globe, ShoppingCart, Layout, Gamepad, BarChart2, TrendingUp, Zap, Mail,
   Code, Palette, Type, Wind, Atom, Leaf, ArrowRight, Sparkles,
-  MonitorDot, Brain, Cloud // Added Cloud icon
+  MonitorDot, Brain, Cloud, Film, Mic, Scissors // Added Film, Mic, Scissors icons
 } from "lucide-react";
 
 const skillIcons: { [key: string]: React.ElementType } = {
@@ -42,9 +42,9 @@ const skillIcons: { [key: string]: React.ElementType } = {
   "GSAP": Sparkles,
   // Learning & Interests
   "AI/ML": Brain,
-  "Blockchain": Atom, // Reusing Atom for Blockchain
-  "UI/UX Design": Palette, // Reusing Palette for UI/UX Design
-  "Cloud Computing": Cloud,
+  "Animation": Film,
+  "Voice Acting": Mic,
+  "Editing": Scissors,
 };
 
 const About = () => {
@@ -88,7 +88,7 @@ const About = () => {
       "C#", "C++", "CSS", "TypeScript", "Tailwind", "React", "Laravel", "Next.js", "GSAP"
     ],
     "Learning & Interests": [
-      "AI/ML", "Blockchain", "UI/UX Design", "Cloud Computing"
+      "AI/ML", "Animation", "Voice Acting", "Editing"
     ]
   };
 
