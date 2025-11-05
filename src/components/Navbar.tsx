@@ -49,17 +49,17 @@ const Navbar = () => {
           </Sheet>
         ) : (
           <div className="flex space-x-8">
-            {/* Desktop navigation links with new hover styles */}
-            <Link to="/" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+            {/* Desktop navigation links with new hover styles and animation */}
+            <Link to="/" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:scale-105">
               Home
             </Link>
-            <Link to="/about" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+            <Link to="/about" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:scale-105">
               About
             </Link>
-            <Link to="/projects" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+            <Link to="/projects" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:scale-105">
               Projects
             </Link>
-            <Link to="/contact" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-colors hover:bg-blue-600">
+            <Link to="/contact" className="text-lg font-medium text-white px-3 py-2 rounded-md transition-all duration-300 ease-in-out hover:bg-blue-600 hover:scale-105">
               Contact
             </Link>
           </div>
