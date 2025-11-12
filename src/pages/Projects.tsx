@@ -66,7 +66,7 @@ const projects: Project[] = [
     id: 6,
     title: "Personal Portfolio V1",
     description: "My first iteration of a personal portfolio, built to showcase early web development skills.",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "/De",
     category: "Creations",
     techStack: ["React", "CSS"],
   },
