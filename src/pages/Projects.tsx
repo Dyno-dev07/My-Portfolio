@@ -64,9 +64,9 @@ const projects: Project[] = [
   // Creations Category (Placeholders)
   {
     id: 6,
-    title: "Personal Portfolio V1",
-    description: "My first iteration of a personal portfolio, built to showcase early web development skills.",
-    imageUrl: "/De",
+    title: "DesignEase Extension",
+    description: "My first chrome extension to help users check for consistency on websites from fonts to responsiveness",
+    imageUrl: "/DesignEaseS.png",
     category: "Creations",
     techStack: ["React", "CSS"],
   },
