@@ -76,16 +76,8 @@ const projects: Project[] = [
     description: "A web-based interactive gallery exploring modern art forms with dynamic animations.",
     imageUrl: "/Updated App Logo.png", // Updated image
     category: "Creations",
-    techStack: ["HTML", "CSS", "JavaScript", "GSAP"],
-  },
-  {
-    id: 8,
-    title: "Recipe Finder App",
-    description: "A simple application to search and display recipes based on user-input ingredients.",
-    imageUrl: "/placeholder.svg",
-    category: "Creations",
-    techStack: ["React", "API Integration"],
-  },
+    techStack: ["TypeScript", "React", "CSS", "GSAP"],
+  }
 ];
 
 const Projects = () => {
