@@ -72,9 +72,9 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Interactive Art Gallery",
+    title: "Financial Tracker App", // Updated title
     description: "A web-based interactive gallery exploring modern art forms with dynamic animations.",
-    imageUrl: "/placeholder.svg",
+    imageUrl: "/Updated App Logo.png", // Updated image
     category: "Creations",
     techStack: ["HTML", "CSS", "JavaScript", "GSAP"],
   },
