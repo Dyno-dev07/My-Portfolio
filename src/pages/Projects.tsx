@@ -67,6 +67,7 @@ const projects: Project[] = [
     title: "DesignEase Extension",
     description: "My first chrome extension to help users check for consistency on websites from fonts to responsiveness",
     imageUrl: "/DesignEaseS.png",
+    link: "https://chromewebstore.google.com/detail/designease/bjklbbpkfdjkjnpjdmdbaedpbjbfpcfp", // Added link
     category: "Creations",
     techStack: ["React", "CSS"],
   },
@@ -76,8 +77,16 @@ const projects: Project[] = [
     description: "A web-based interactive gallery exploring modern art forms with dynamic animations.",
     imageUrl: "/Updated App Logo.png", // Updated image
     category: "Creations",
-    techStack: ["TypeScript", "React", "CSS", "GSAP"],
-  }
+    techStack: ["HTML", "CSS", "JavaScript", "GSAP"],
+  },
+  {
+    id: 8,
+    title: "Recipe Finder App",
+    description: "A simple application to search and display recipes based on user-input ingredients.",
+    imageUrl: "/placeholder.svg",
+    category: "Creations",
+    techStack: ["React", "API Integration"],
+  },
 ];
 
 const Projects = () => {
