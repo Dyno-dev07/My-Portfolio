@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           </Button>
         ) : (
           <Button disabled className="w-full bg-gray-600 text-white text-lg px-8 py-6 rounded-md">
-            No Link Available
+            Under Development
           </Button>
         )}
       </CardFooter>
