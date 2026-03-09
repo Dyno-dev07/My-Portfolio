@@ -73,7 +73,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-7xl font-black italic text-white tracking-tighter uppercase"
           >
-            BROADCAST <span className="text-pink-500">SIGNAL</span>
+            LET'S <span className="text-pink-500">CONNECT</span>
           </motion.h2>
         </div>
 
