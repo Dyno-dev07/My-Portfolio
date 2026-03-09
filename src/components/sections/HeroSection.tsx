@@ -22,14 +22,16 @@ const HeroSection = () => {
           SYSTEM STATUS: ONLINE
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-black italic tracking-tighter text-white mb-6 pr-4"
-        >
-          DEANNE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">AGIR</span>
-        </motion.h1>
+        <div className="block">
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-6xl md:text-8xl font-black italic tracking-tighter text-white mb-6 px-10 inline-block"
+          >
+            DEANNE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">AGIR</span>
+          </motion.h1>
+        </div>
 
         <motion.p
           initial={{ opacity: 0 }}
