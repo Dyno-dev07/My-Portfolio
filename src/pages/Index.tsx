@@ -19,12 +19,12 @@ const Index = () => {
 
       <div className="relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
-        <ProjectsSection />
+        <ExperienceSection />
       </div>
 
       <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent" />
-        <ExperienceSection />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+        <ProjectsSection />
       </div>
 
       <div id="contact" className="relative">
