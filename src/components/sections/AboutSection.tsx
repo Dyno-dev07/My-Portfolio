@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { User, MapPin, Cpu, Code2, Globe2, Zap } from "lucide-react";
+import { User, MapPin, Cpu, Globe2, Zap } from "lucide-react";
 
 const skillCategories = [
   {
@@ -100,9 +100,15 @@ const AboutSection = () => {
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {cat.skills.map(skill => (
-                        <Badge key={skill} variant="outline" className="bg-transparent border-gray-800 text-[10px] text-gray-400 group-hover:text-white group-hover:border-blue-500/20 transition-colors">
-                          {skill}
-                        </Badge>
+                        <motion.div
+                          key={skill}
+                          whileHover={{ scale: 1.15 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        >
+                          <Badge variant="outline" className="bg-transparent border-gray-800 text-[10px] text-gray-400 group-hover:text-white group-hover:border-blue-500/20 transition-colors cursor-default">
+                            {skill}
+                          </Badge>
+                        </motion.div>
                       ))}
                     </div>
                   </Card>
