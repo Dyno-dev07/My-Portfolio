@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, scrollTrigger } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { User, MapPin, Cpu, Globe2, Zap } from "lucide-react";
@@ -40,7 +40,7 @@ const AboutSection = () => {
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            scrollTrigger={{ trigger: { element: "#about" } }}
             className="relative group"
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80">
@@ -76,7 +76,7 @@ const AboutSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              scrollTrigger={{ trigger: { element: "#about" } }}
             >
               <h2 className="text-4xl md:text-6xl font-black italic text-white tracking-tighter mb-6">
                 SYSTEM <span className="text-blue-500">PROFILE</span>
@@ -93,8 +93,7 @@ const AboutSection = () => {
                   key={cat.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  scrollTrigger={{ trigger: { element: "#about" } }}
                   whileHover={!isMobile ? { scale: 1.05 } : {}}
                 >
                   <Card className="bg-gray-900/40 border-gray-800 p-4 hover:border-blue-500/30 transition-all group h-full">
