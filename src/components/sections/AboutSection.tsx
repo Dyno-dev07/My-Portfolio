@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { User, MapPin, Cpu, Globe2, Zap } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const skillCategories = [
   {
@@ -28,6 +29,8 @@ const skillCategories = [
 ];
 
 const AboutSection = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -102,7 +105,7 @@ const AboutSection = () => {
                       {cat.skills.map(skill => (
                         <motion.div
                           key={skill}
-                          whileHover={{ scale: 1.15 }}
+                          whileHover={!isMobile ? { scale: 1.15 } : {}}
                           transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         >
                           <Badge variant="outline" className="bg-transparent border-gray-800 text-[10px] text-gray-400 group-hover:text-white group-hover:border-blue-500/20 transition-colors cursor-default">
