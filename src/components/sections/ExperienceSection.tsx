@@ -19,7 +19,10 @@ const experiences = [
     company: "Elisha & Charles Solutions Inc.",
     date: "APR 2025 - PRESENT",
     status: "ACTIVE",
-    desc: "Created and designed a website to serve as a lead generator and digital portfolio for clients. Optimized website SEO, resulting in a 45% increase in organic Google traffic."
+    bullets: [
+      "Created and designed a website to serve as a lead generator and digital portfolio for clients.",
+      "Optimized website SEO, resulting in a 45% increase in organic Google traffic."
+    ]
   },
   {
     id: "exp-2",
@@ -27,7 +30,10 @@ const experiences = [
     company: "Sites at Scale",
     date: "NOV 2024 - FEB 2025",
     status: "COMPLETED",
-    desc: "Developed a Chrome extension to streamline site element checks and mobile responsiveness, reducing pre-launch inspection time by 57%. Developed a Python script to automate the transfer of client product data from PostgreSQL to Shopify’s database format."
+    bullets: [
+      "Developed a Chrome extension to streamline site element checks and mobile responsiveness, reducing pre-launch inspection time by 57%.",
+      "Developed a Python script to automate the transfer of client product data from PostgreSQL to Shopify’s database format."
+    ]
   },
   {
     id: "exp-3",
@@ -35,7 +41,10 @@ const experiences = [
     company: "Chino Mowers & Engine Service",
     date: "JAN - MAR 2024",
     status: "COMPLETED",
-    desc: "Built web pages based on client-provided Figma designs, ensuring accurate layout and responsiveness. Designed and implemented custom 'Contact Us' and newsletter forms not supported by the client’s existing Shopify theme."
+    bullets: [
+      "Built web pages based on client-provided Figma designs, ensuring accurate layout and responsiveness.",
+      "Designed and implemented custom 'Contact Us' and newsletter forms not supported by the client’s existing Shopify theme."
+    ]
   },
   {
     id: "exp-4",
@@ -43,7 +52,12 @@ const experiences = [
     company: "Sites at Scale",
     date: "JUL 2023 - NOV 2024",
     status: "COMPLETED",
-    desc: "Managed multiple client feature requests and issues across 4 projects. Built a Python script to automate image and data collection, reducing manual workload by 25%. Fortified client websites against SQL injection attacks by implementing parameterized queries, mitigating 20+ vulnerabilities."
+    bullets: [
+      "Managed multiple client feature requests and issues across 4 projects, ensuring timely delivery and high client satisfaction.",
+      "Designed and developed visually appealing, responsive websites tailored to client needs.",
+      "Built a Python script to automate image and data collection, reducing manual workload by 25%.",
+      "Fortified client websites against SQL injection attacks by implementing parameterized queries and input validation, mitigating 20+ vulnerabilities and reducing potential data breaches by 15%."
+    ]
   },
   {
     id: "exp-5",
@@ -51,7 +65,10 @@ const experiences = [
     company: "Mangtas",
     date: "FEB - MAY 2023",
     status: "COMPLETED",
-    desc: "Contributed to the development and maintenance of web applications. Responsibilities included writing clean code, participating in code reviews, and assisting in debugging and testing phases using modern web technologies."
+    bullets: [
+      "Contributed to the development and maintenance of web applications.",
+      "Wrote clean code, participated in code reviews, and assisted in debugging and testing phases using modern web technologies."
+    ]
   }
 ];
 
@@ -99,9 +116,14 @@ const ExperienceSection = () => {
                   <Calendar className="h-4 w-4" /> {recent.date}
                 </div>
               </div>
-              <p className="mt-8 text-gray-300 text-lg leading-relaxed pl-0 md:pl-20 relative z-10">
-                {recent.desc}
-              </p>
+              <ul className="mt-8 space-y-3 pl-0 md:pl-20 relative z-10">
+                {recent.bullets.map((bullet, i) => (
+                  <li key={i} className="text-gray-300 text-lg leading-relaxed flex gap-3">
+                    <span className="text-purple-500 mt-1.5">•</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </Card>
           </motion.div>
 
@@ -140,9 +162,14 @@ const ExperienceSection = () => {
                       
                       <AccordionContent className="px-6 pb-6">
                         <div className="pt-4 border-t border-gray-800">
-                          <p className="text-sm text-gray-400 leading-relaxed italic">
-                            {exp.desc}
-                          </p>
+                          <ul className="space-y-2">
+                            {exp.bullets.map((bullet, i) => (
+                              <li key={i} className="text-sm text-gray-400 leading-relaxed flex gap-2">
+                                <span className="text-purple-500">•</span>
+                                {bullet}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </AccordionContent>
                     </AccordionItem>

@@ -3,32 +3,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Zap, Database, ShieldAlert } from "lucide-react";
+import { Globe, Clock, Database, ShieldAlert } from "lucide-react";
 
 const metrics = [
   {
-    label: "SEO_TRAFFIC_GAIN",
-    value: "+45% ORGANIC",
-    icon: TrendingUp,
-    color: "text-green-400",
-    borderColor: "border-green-500/30"
-  },
-  {
-    label: "INSPECTION_LATENCY",
-    value: "-57% TIME",
-    icon: Zap,
+    label: "WEBSITES_MAINTAINED",
+    value: "50+ SITES",
+    icon: Globe,
     color: "text-blue-400",
     borderColor: "border-blue-500/30"
+  },
+  {
+    label: "TOTAL_EXPERIENCE",
+    value: "3+ YEARS",
+    icon: Clock,
+    color: "text-purple-400",
+    borderColor: "border-purple-500/30"
   },
   {
     label: "MANUAL_WORKLOAD",
     value: "-25% REDUCTION",
     icon: Database,
-    color: "text-purple-400",
-    borderColor: "border-purple-500/30"
+    color: "text-green-400",
+    borderColor: "border-green-500/30"
   },
   {
-    label: "VULNERABILITIES_PATCHED",
+    label: "VULNERABILITIES",
     value: "20+ MITIGATED",
     icon: ShieldAlert,
     color: "text-pink-400",
