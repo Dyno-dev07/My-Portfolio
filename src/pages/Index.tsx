@@ -2,9 +2,10 @@
 
 import React from "react";
 import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
-import Contact from "@/pages/Contact"; // Reusing existing contact for now but wrapping it
+import Contact from "@/pages/Contact";
 
 const Index = () => {
   return (
@@ -12,13 +13,17 @@ const Index = () => {
       <HeroSection />
       
       <div className="relative">
-        {/* Section Dividers / Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-        <ProjectsSection />
+        <AboutSection />
       </div>
 
       <div className="relative">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+        <ProjectsSection />
+      </div>
+
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent" />
         <ExperienceSection />
       </div>
 
