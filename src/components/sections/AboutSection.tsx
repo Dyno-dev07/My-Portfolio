@@ -79,7 +79,7 @@ const AboutSection = () => {
                 SYSTEM <span className="text-blue-500">PROFILE</span>
               </h2>
               <p className="text-xl text-gray-400 font-medium leading-relaxed mb-8">
-                I'm Deanne Agir, a high-performance developer bridging the gap between immersive web architectures and complex game logic. I specialize in crafting future-ready digital experiences where technical precision meets creative excellence.
+                I'm Deanne Agir, a dedicated and innovative developer with expertise in both web and game development. Leveraging a strong problem-solving mindset and a passion for technology, I craft dynamic digital experiences that push boundaries.
               </p>
             </motion.div>
 
