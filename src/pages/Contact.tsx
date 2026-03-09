@@ -14,7 +14,8 @@ const contactInfo = [
     link: "mailto:deanneagir@example.com",
     label: "DIRECT_MESSAGE",
     color: "text-blue-400",
-    borderColor: "border-blue-500/30"
+    borderColor: "border-blue-500/30",
+    buttonText: "CONNECT"
   },
   {
     icon: Phone,
@@ -23,7 +24,8 @@ const contactInfo = [
     link: "tel:+639123456789",
     label: "MOBILE_UPLINK",
     color: "text-purple-400",
-    borderColor: "border-purple-500/30"
+    borderColor: "border-purple-500/30",
+    buttonText: "CONNECT"
   },
   {
     icon: MapPin,
@@ -32,7 +34,8 @@ const contactInfo = [
     link: "https://www.google.com/maps/place/Pasay+City,+Metro+Manila,+Philippines",
     label: "BASE_STATION",
     color: "text-green-400",
-    borderColor: "border-green-500/30"
+    borderColor: "border-green-500/30",
+    buttonText: "LOCATE"
   },
   {
     icon: Linkedin,
@@ -41,7 +44,8 @@ const contactInfo = [
     link: "https://www.linkedin.com/in/deanneagir",
     label: "PROFESSIONAL_NODE",
     color: "text-pink-400",
-    borderColor: "border-pink-500/30"
+    borderColor: "border-pink-500/30",
+    buttonText: "CONNECT"
   },
 ];
 
@@ -116,7 +120,7 @@ const Contact = () => {
                         >
                           <a href={item.link} target="_blank" rel="noopener noreferrer">
                             <span className="skew-x-[12deg] flex items-center gap-2">
-                              CONNECT <Send className="h-3 w-3" />
+                              {item.buttonText} <Send className="h-3 w-3" />
                             </span>
                           </a>
                         </Button>
