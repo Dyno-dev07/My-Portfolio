@@ -25,6 +25,33 @@ const projects = [
     category: "Websites",
   },
   {
+    id: 3,
+    title: "RSD",
+    description: "Enterprise-grade corporate interface with high-availability content delivery and professional UI.",
+    imageUrl: "/RSD.png",
+    link: "https://www.rsd.co.nz/",
+    techStack: ["WordPress", "Elementor"],
+    category: "Websites",
+  },
+  {
+    id: 4,
+    title: "Woolstar",
+    description: "Sustainable e-commerce module with high-fidelity product rendering and global shipping logic.",
+    imageUrl: "/Woolstar.png",
+    link: "https://woolstar.com.au/",
+    techStack: ["Shopify", "Liquid"],
+    category: "Websites",
+  },
+  {
+    id: 5,
+    title: "Homely Flooring",
+    description: "Interactive interior design hub with optimized asset loading and intuitive navigation specs.",
+    imageUrl: "/HomelyFlooring.png",
+    link: "https://www.homelyflooring.com.au/",
+    techStack: ["WordPress", "Divi"],
+    category: "Websites",
+  },
+  {
     id: 6,
     title: "DesignEase Extension",
     description: "System diagnostic tool for web developers to audit consistency, fonts, and responsive breakpoints.",
@@ -66,23 +93,23 @@ const ProjectsSection = () => {
           <TabsContent value="all" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <GamerPartCard key={project.id} project={project} index={index} />
+                <GamerPartCard key={project.id} project={project} />
               ))}
             </div>
           </TabsContent>
           
           <TabsContent value="Websites" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.filter(p => p.category === "Websites").map((project, index) => (
-                <GamerPartCard key={project.id} project={project} index={index} />
+              {projects.filter(p => p.category === "Websites").map((project) => (
+                <GamerPartCard key={project.id} project={project} />
               ))}
             </div>
           </TabsContent>
 
           <TabsContent value="Creations" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.filter(p => p.category === "Creations").map((project, index) => (
-                <GamerPartCard key={project.id} project={project} index={index} />
+              {projects.filter(p => p.category === "Creations").map((project) => (
+                <GamerPartCard key={project.id} project={project} />
               ))}
             </div>
           </TabsContent>
