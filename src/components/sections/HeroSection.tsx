@@ -7,11 +7,14 @@ import { ChevronDown, Terminal } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden pt-20 bg-black">
-      {/* Animated Background Grid - Full Width */}
+    <section id="home" className="min-h-screen w-full flex flex-col items-center justify-between relative overflow-hidden pt-32 pb-12 bg-black">
+      {/* Animated Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
       
-      {/* Content Wrapper - Full Width with horizontal padding */}
+      {/* Top Spacer to help center the middle content */}
+      <div className="hidden md:block" />
+
+      {/* Main Content Wrapper */}
       <div className="w-full px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,11 +60,16 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Now part of the flex flow for perfect centering */}
       <motion.div
-        animate={{ y: [0, 12, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-blue-500/30 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 12, 0] }}
+        transition={{ 
+          opacity: { duration: 1, delay: 1 },
+          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+        }}
+        className="relative z-10 text-blue-500/30 flex flex-col items-center gap-2 cursor-pointer"
+        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="text-[10px] font-mono tracking-[0.3em] uppercase">Scroll</span>
         <ChevronDown className="h-6 w-6" />
