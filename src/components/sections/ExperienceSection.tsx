@@ -3,7 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Activity, Calendar, ChevronDown } from "lucide-react";
+import { Activity, Calendar } from "lucide-react";
+import ExperienceMetrics from "../ExperienceMetrics";
 import {
   Accordion,
   AccordionContent,
@@ -65,6 +66,9 @@ const ExperienceSection = () => {
         </h2>
 
         <div className="max-w-6xl mx-auto">
+          {/* New Metrics Section */}
+          <ExperienceMetrics />
+
           {/* Recent Experience - Centered & Featured */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +77,6 @@ const ExperienceSection = () => {
             className="mb-12 flex justify-center"
           >
             <Card className="w-full max-w-4xl bg-gray-900/60 border-l-4 border-l-purple-500 border-y-gray-800 border-r-gray-800 p-8 hover:bg-gray-800/40 transition-all group relative overflow-hidden">
-              {/* Glow effect for featured card */}
               <div className="absolute -inset-px bg-gradient-to-r from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
