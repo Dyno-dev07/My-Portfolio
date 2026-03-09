@@ -15,19 +15,19 @@ import {
 const experiences = [
   {
     id: "exp-1",
-    title: "Software Engineer",
+    title: "IT Specialist",
     company: "Elisha & Charles Solutions Inc.",
     date: "APR 2025 - PRESENT",
     status: "ACTIVE",
-    desc: "Currently, as a Software Engineer at Elisha & Charles Solutions Inc., I am involved in the full software development lifecycle, from conceptualization to deployment. I design and implement robust, scalable, and efficient software solutions, contributing to innovative projects and leveraging cutting-edge technologies."
+    desc: "Created and designed a website to serve as a lead generator and digital portfolio for clients. Optimized website SEO, resulting in a 45% increase in organic Google traffic."
   },
   {
     id: "exp-2",
-    title: "Quality Assurance Specialist",
+    title: "QA Engineer",
     company: "Sites at Scale",
     date: "NOV 2024 - FEB 2025",
     status: "COMPLETED",
-    desc: "In my role as a Quality Assurance Specialist at Sites at Scale, I was tasked with ensuring the reliability and functionality of web applications. I developed and executed test plans, identified and documented bugs, and worked closely with development teams to resolve issues. My focus was on delivering a flawless user experience."
+    desc: "Developed a Chrome extension to streamline site element checks and mobile responsiveness, reducing pre-launch inspection time by 57%. Developed a Python script to automate the transfer of client product data from PostgreSQL to Shopify’s database format."
   },
   {
     id: "exp-3",
@@ -35,7 +35,7 @@ const experiences = [
     company: "Chino Mowers & Engine Service",
     date: "JAN - MAR 2024",
     status: "COMPLETED",
-    desc: "As a Shopify Web Developer for Chino Mowers & Engine Service, I was responsible for designing, developing, and maintaining their e-commerce store. This included custom theme development, app integration, and optimizing the user experience to drive sales. I ensured the site was responsive and visually appealing across all devices."
+    desc: "Built web pages based on client-provided Figma designs, ensuring accurate layout and responsiveness. Designed and implemented custom 'Contact Us' and newsletter forms not supported by the client’s existing Shopify theme."
   },
   {
     id: "exp-4",
@@ -43,7 +43,7 @@ const experiences = [
     company: "Sites at Scale",
     date: "JUL 2023 - NOV 2024",
     status: "COMPLETED",
-    desc: "At Sites at Scale, I worked as a Technical Developer, focusing on building and customizing websites for various clients. I specialized in implementing complex features, optimizing site performance, and ensuring cross-browser compatibility. My role involved close collaboration with designers and project managers to deliver high-quality web solutions."
+    desc: "Managed multiple client feature requests and issues across 4 projects. Built a Python script to automate image and data collection, reducing manual workload by 25%. Fortified client websites against SQL injection attacks by implementing parameterized queries, mitigating 20+ vulnerabilities."
   },
   {
     id: "exp-5",
@@ -51,7 +51,7 @@ const experiences = [
     company: "Mangtas",
     date: "FEB - MAY 2023",
     status: "COMPLETED",
-    desc: "As a Software Engineer Intern at Mangtas, I contributed to the development and maintenance of web applications. My responsibilities included writing clean, efficient code, participating in code reviews, and assisting in debugging and testing phases. I gained hands-on experience with modern web technologies and agile development methodologies."
+    desc: "Contributed to the development and maintenance of web applications. Responsibilities included writing clean code, participating in code reviews, and assisting in debugging and testing phases using modern web technologies."
   }
 ];
 
@@ -66,7 +66,6 @@ const ExperienceSection = () => {
         </h2>
 
         <div className="max-w-6xl mx-auto">
-          {/* New Metrics Section */}
           <ExperienceMetrics />
 
           {/* Recent Experience - Centered & Featured */}
