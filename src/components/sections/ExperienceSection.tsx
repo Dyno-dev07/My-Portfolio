@@ -9,23 +9,37 @@ const experiences = [
   {
     title: "Software Engineer",
     company: "Elisha & Charles Solutions Inc.",
-    date: "2025 - PRESENT",
+    date: "APR 2025 - PRESENT",
     status: "ACTIVE",
-    desc: "Architecting robust software solutions and leading full-cycle development deployments."
+    desc: "Currently, as a Software Engineer at Elisha & Charles Solutions Inc., I am involved in the full software development lifecycle, from conceptualization to deployment. I design and implement robust, scalable, and efficient software solutions, contributing to innovative projects and leveraging cutting-edge technologies."
   },
   {
-    title: "QA Specialist",
+    title: "Quality Assurance Specialist",
     company: "Sites at Scale",
-    date: "2024 - 2025",
+    date: "NOV 2024 - FEB 2025",
     status: "COMPLETED",
-    desc: "System-wide debugging and performance optimization for high-traffic web applications."
+    desc: "In my role as a Quality Assurance Specialist at Sites at Scale, I was tasked with ensuring the reliability and functionality of web applications. I developed and executed test plans, identified and documented bugs, and worked closely with development teams to resolve issues. My focus was on delivering a flawless user experience."
+  },
+  {
+    title: "Shopify Web Developer",
+    company: "Chino Mowers & Engine Service",
+    date: "JAN - MAR 2024",
+    status: "COMPLETED",
+    desc: "As a Shopify Web Developer for Chino Mowers & Engine Service, I was responsible for designing, developing, and maintaining their e-commerce store. This included custom theme development, app integration, and optimizing the user experience to drive sales. I ensured the site was responsive and visually appealing across all devices."
   },
   {
     title: "Technical Developer",
     company: "Sites at Scale",
-    date: "2023 - 2024",
+    date: "JUL 2023 - NOV 2024",
     status: "COMPLETED",
-    desc: "Custom component engineering and cross-platform compatibility integration."
+    desc: "At Sites at Scale, I worked as a Technical Developer, focusing on building and customizing websites for various clients. I specialized in implementing complex features, optimizing site performance, and ensuring cross-browser compatibility. My role involved close collaboration with designers and project managers to deliver high-quality web solutions."
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Mangtas",
+    date: "FEB - MAY 2023",
+    status: "COMPLETED",
+    desc: "As a Software Engineer Intern at Mangtas, I contributed to the development and maintenance of web applications. My responsibilities included writing clean, efficient code, participating in code reviews, and assisting in debugging and testing phases. I gained hands-on experience with modern web technologies and agile development methodologies."
   }
 ];
 
@@ -66,7 +80,7 @@ const ExperienceSection = () => {
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 text-gray-400 text-sm leading-relaxed pl-14">
+                <p className="mt-4 text-gray-400 text-sm leading-relaxed pl-0 md:pl-14">
                   {exp.desc}
                 </p>
               </Card>
