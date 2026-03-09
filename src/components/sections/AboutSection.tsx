@@ -95,6 +95,7 @@ const AboutSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
+                  whileHover={!isMobile ? { scale: 1.05 } : {}}
                 >
                   <Card className="bg-gray-900/40 border-gray-800 p-4 hover:border-blue-500/30 transition-all group h-full">
                     <div className="flex items-center gap-2 mb-4">
@@ -103,15 +104,9 @@ const AboutSection = () => {
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {cat.skills.map(skill => (
-                        <motion.div
-                          key={skill}
-                          whileHover={!isMobile ? { scale: 1.15 } : {}}
-                          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                        >
-                          <Badge variant="outline" className="bg-transparent border-gray-800 text-[10px] text-gray-400 group-hover:text-white group-hover:border-blue-500/20 transition-colors cursor-default">
-                            {skill}
-                          </Badge>
-                        </motion.div>
+                        <Badge key={skill} variant="outline" className="bg-transparent border-gray-800 text-[10px] text-gray-400 group-hover:text-white group-hover:border-blue-500/20 transition-colors cursor-default">
+                          {skill}
+                        </Badge>
                       ))}
                     </div>
                   </Card>
