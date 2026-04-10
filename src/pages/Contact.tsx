@@ -20,8 +20,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "VOICE_COMMS",
-    value: "+63 912 345 6789",
-    link: "tel:+639123456789",
+    value: "+63 926 2692 792",
+    link: "tel:+639262692792",
     label: "MOBILE_UPLINK",
     color: "text-purple-400",
     borderColor: "border-purple-500/30",
