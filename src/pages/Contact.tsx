@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Linkedin, Radio, Send } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, Radio, Send } from "lucide-react";
 
 const contactInfo = [
   {
@@ -28,14 +28,14 @@ const contactInfo = [
     buttonText: "CONNECT"
   },
   {
-    icon: MapPin,
-    title: "GEO_LOCATION",
-    value: "Pasay City, Philippines",
-    link: "https://www.google.com/maps/place/Pasay+City,+Metro+Manila,+Philippines",
-    label: "BASE_STATION",
+    icon: Github,
+    title: "SOURCE_CODE",
+    value: "github.com/Dyno-dev07",
+    link: "https://github.com/Dyno-dev07",
+    label: "GITHUB_PROFILE",
     color: "text-green-400",
     borderColor: "border-green-500/30",
-    buttonText: "LOCATE"
+    buttonText: "VIEW"
   },
   {
     icon: Linkedin,
