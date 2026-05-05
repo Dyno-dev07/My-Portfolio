@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "EMAIL_LINK",
-    value: "deanneagir@example.com",
-    link: "mailto:deanneagir@example.com",
+    value: "deanneagir@gmail.com",
+    link: "mailto:deanneagir@gmail.com",
     label: "DIRECT_MESSAGE",
     color: "text-blue-400",
     borderColor: "border-blue-500/30",
