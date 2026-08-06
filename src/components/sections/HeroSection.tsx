@@ -43,7 +43,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-medium leading-relaxed"
         >
-          High-Performance Full-Stack Developer specializing in immersive web architectures and digital components.
+          Full-Stack Developer building and optimizing eCommerce and client-facing applications with JavaScript, Python, and PostgreSQL.
         </motion.p>
 
         <motion.div

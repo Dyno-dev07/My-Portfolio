@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Globe, Clock, Database, ShieldAlert } from "lucide-react";
+import { Globe, Clock, Database, Gauge } from "lucide-react";
 
 const metrics = [
   {
@@ -28,9 +28,9 @@ const metrics = [
     borderColor: "border-green-500/30"
   },
   {
-    label: "VULNERABILITIES",
-    value: "20+ MITIGATED",
-    icon: ShieldAlert,
+    label: "PRE_LAUNCH_QA",
+    value: "-57% TIME",
+    icon: Gauge,
     color: "text-pink-400",
     borderColor: "border-pink-500/30"
   }

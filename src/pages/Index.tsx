@@ -34,7 +34,7 @@ const Index = () => {
 
       <footer className="py-12 border-t border-gray-900 text-center">
         <p className="text-gray-600 font-mono text-xs tracking-widest uppercase">
-          © 2024 DEANNE AGIR // ALL SYSTEMS OPERATIONAL
+          © 2026 DEANNE AGIR // ALL SYSTEMS OPERATIONAL
         </p>
       </footer>
     </div>

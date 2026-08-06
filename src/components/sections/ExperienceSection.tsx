@@ -15,52 +15,44 @@ import {
 const experiences = [
   {
     id: "exp-1",
-    title: "IT Specialist",
-    company: "Elisha & Charles Solutions Inc.",
-    date: "APR 2025 - PRESENT",
+    title: "Shopify Web Developer | GHL Specialist",
+    company: "Freelance",
+    date: "JAN 2024 - PRESENT",
     status: "ACTIVE",
     bullets: [
-      "Created and designed a website to serve as a lead generator and digital portfolio for clients.",
-      "Optimized website SEO, resulting in a 45% increase in organic Google traffic."
+      "Developed responsive Shopify web pages from Figma designs, ensuring pixel-accurate implementation and cross-device compatibility.",
+      "Built and integrated custom “Contact Us” and newsletter forms beyond theme limitations, improving lead capture functionality.",
+      "Built automated lead-scoring and email workflows in GHL that tracked website visitors, ranked leads by interest, and routed each one into the right follow-up sequence automatically.",
+      "Designed and coded responsive marketing emails that displayed correctly across all major email apps, with clear calls-to-action that drove more demo bookings."
     ]
   },
   {
     id: "exp-2",
-    title: "QA Engineer",
-    company: "Sites at Scale",
-    date: "NOV 2024 - FEB 2025",
+    title: "IT Specialist",
+    company: "Elisha & Charles Solutions, Inc.",
+    date: "APR 2025 - MAY 2026",
     status: "COMPLETED",
     bullets: [
-      "Developed a Chrome extension to streamline site element checks and mobile responsiveness, reducing pre-launch inspection time by 57%.",
-      "Developed a Python script to automate the transfer of client product data from PostgreSQL to Shopify’s database format."
+      "Assisted in maintaining and optimizing company systems and web assets.",
+      "Integrated Google reCAPTCHA into web forms, significantly reducing spam and bot-generated submissions.",
+      "Configured and deployed Cloudflare services, improving website security, DNS management, and performance optimization.",
+      "Integrated SMTP services for reliable email delivery, enabling automated notifications and improving form communication workflows."
     ]
   },
   {
     id: "exp-3",
-    title: "Shopify Web Developer",
-    company: "Chino Mowers & Engine Service",
-    date: "JAN - MAR 2024",
+    title: "Technical Developer / QA Engineer",
+    company: "Sites at Scale",
+    date: "JUL 2023 - FEB 2025",
     status: "COMPLETED",
     bullets: [
-      "Built web pages based on client-provided Figma designs, ensuring accurate layout and responsiveness.",
-      "Designed and implemented custom 'Contact Us' and newsletter forms not supported by the client’s existing Shopify theme."
+      "Built and managed client automation workflows using GoHighLevel, HubSpot, and Zapier, streamlining lead capture and follow-up processes.",
+      "Developed a Python automation script to collect and process image and product data, reducing manual workload by 25%.",
+      "Built a Chrome extension to automate site element validation and mobile responsiveness checks, reducing pre-launch QA time by 57%."
     ]
   },
   {
     id: "exp-4",
-    title: "Technical Developer",
-    company: "Sites at Scale",
-    date: "JUL 2023 - NOV 2024",
-    status: "COMPLETED",
-    bullets: [
-      "Managed multiple client feature requests and issues across 4 projects, ensuring timely delivery and high client satisfaction.",
-      "Designed and developed visually appealing, responsive websites tailored to client needs.",
-      "Built a Python script to automate image and data collection, reducing manual workload by 25%.",
-      "Fortified client websites against SQL injection attacks by implementing parameterized queries and input validation, mitigating 20+ vulnerabilities and reducing potential data breaches by 15%."
-    ]
-  },
-  {
-    id: "exp-5",
     title: "Software Engineer Intern",
     company: "Mangtas",
     date: "FEB - MAY 2023",
